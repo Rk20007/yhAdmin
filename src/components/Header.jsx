@@ -8,14 +8,12 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import GetTinmer from "../utils/getTimer";
+import Cookies from "js-cookie";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
-  const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
+  const loaction = useLocation();
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -25,17 +23,33 @@ export default function Header() {
     setAnchorEl(null);
   };
 
+  const handleLogout = () => {
+    Cookies.remove("YH_admin_token");
+    localStorage.clear();
+    window.location.href = "/";
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="secondary">
+      <AppBar
+        position="static"
+        color="secondary"
+        sx={{
+          position: `${loaction.pathname === "/" ? "unset" : "fixed"}`,
+          width: `${loaction.pathname === "/" ? "unset" : "100%"}`,
+          zIndex: "999",
+        }}
+      >
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             YH - Admin Panel
           </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <GetTinmer />
-          </Typography>
-          {auth && (
+          {Cookies.get("YH_admin_token") && (
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <GetTinmer />
+            </Typography>
+          )}
+          {Cookies.get("YH_admin_token") && (
             <div>
               <IconButton
                 size="large"
@@ -62,7 +76,7 @@ export default function Header() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </Menu>
             </div>
           )}

@@ -1,11 +1,42 @@
 import { Box, Button, Paper, TextField } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
+import { LoginApi } from "../api/auth.api";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const nav = useNavigate();
-  const handleLogin = () => {
-    nav("/admin/secure/home");
+  const [payload, setPayload] = useState({
+    userId: "",
+    password: "",
+  });
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleLogin();
+    }
+  };
+
+  const handleChange = (e) => {
+    setPayload({ ...payload, [e.target.name]: e.target.value });
+  };
+  const handleLogin = async () => {
+    if (payload.userId === "" || payload.password === "") {
+      toast.error("Please fill all the fields");
+      return;
+    }
+    const res = await LoginApi(payload);
+    if (res.status) {
+      toast.success(res.message);
+      Cookies.set("YH_admin_token", res.data.token);
+      localStorage.setItem("admin_name", res.data.name);
+      setTimeout(() => {
+        window.location.href = "/admin/secure/home";
+      }, 1500);
+    } else {
+      toast.error(res.message);
+    }
   };
   return (
     <section
@@ -42,12 +73,19 @@ const Login = () => {
             label="Enter Admin ID"
             variant="outlined"
             fullWidth
+            name="userId"
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
           <TextField
             id="outlined-basic"
             label="Enter Admin Password"
             variant="outlined"
             fullWidth
+            type="password"
+            name="password"
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
           <Button
             variant="contained"

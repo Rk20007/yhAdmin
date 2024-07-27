@@ -3,3 +3,64 @@ body {
   background-color: #eef2ff !important;
   color: black;
 }
+.flight-destinations {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+.flight-offer {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+.flight-banner {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+.FlightTestimonial {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+.HotelwithDeal {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+.support-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.user-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.transport-listing {
+  padding-top: 5rem;
+  padding-left: 2rem;
+}
+.commoin-booking-main {
+  margin-top: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.common-booking {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.social {
+  padding-top: 6rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-right: 25rem;
+  gap: 1.5rem;
+}
+.user-details-main {
+  margin-top: 6rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
