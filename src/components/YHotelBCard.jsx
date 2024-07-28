@@ -1,26 +1,29 @@
 import { Card, CardContent, Typography, Divider } from "@mui/material";
+import moment from "moment";
 import React from "react";
 
-const YHotelBCard = () => {
+const YHotelBCard = ({ data }) => {
   return (
     <Card sx={{ width: "100%", height: "auto", boxShadow: 3, borderRadius: 2 }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Transport Name - XYZ
+          Hotel Name: {data.hotelName}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Address: 1234 Hotel St, City, Country
+          Location: {data.location}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Rating: ⭐⭐⭐⭐
+          Contact: {data.mobileNumber}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Price: $120 per night
+          Price: {data.price}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Date: {moment(data.createdAt).format("DD-MM-YYYY")}
         </Typography>
         <Divider sx={{ my: 2 }} />
         <Typography variant="body2" color="text.secondary">
-          Description: This is a beautiful hotel located in the heart of the
-          city. Enjoy luxury and comfort during your stay.
+          Booking under the name: {data.name}
         </Typography>
       </CardContent>
     </Card>

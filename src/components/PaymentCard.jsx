@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
+import moment from "moment";
 
-const PaymentCard = ({ transaction }) => {
+const PaymentCard = ({ data }) => {
   return (
     <Card
       sx={{
@@ -18,18 +19,24 @@ const PaymentCard = ({ transaction }) => {
         </Typography>
         <Box sx={{ marginBottom: 2 }}>
           <Typography variant="body2" color="text.secondary">
-            Date:
+            Date: {moment(data.createdAt).format("DD-MM-YYYY")}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Amount:
+            Amount: {data.amount}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Method:
+            mobileNumber: {data.mobileNumber}
           </Typography>
         </Box>
         <Box sx={{ borderTop: "1px solid #ddd", paddingTop: 2 }}>
           <Typography variant="body2" color="text.secondary">
-            Transaction ID:
+            razorpay_order_id: {data.razorpay_order_id}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            razorpay_payment_id: {data.razorpay_payment_id}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            razorpay_signature: {data.razorpay_signature}
           </Typography>
         </Box>
       </CardContent>
