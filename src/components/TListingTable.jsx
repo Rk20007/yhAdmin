@@ -64,6 +64,7 @@ export default function TransListingTable({ offers, getOffers }) {
             <StyledTableCell align="center">Duration</StyledTableCell>
             <StyledTableCell align="center">Month</StyledTableCell>
             <StyledTableCell align="center">Year</StyledTableCell>
+            <StyledTableCell align="center">Service Fee</StyledTableCell>
             <StyledTableCell align="center">Action</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -82,6 +83,7 @@ export default function TransListingTable({ offers, getOffers }) {
               <StyledTableCell align="center">{ele.duration}</StyledTableCell>
               <StyledTableCell align="center">{ele.month}</StyledTableCell>
               <StyledTableCell align="center">{ele.year}</StyledTableCell>
+              <StyledTableCell align="center">{ele.service_fee}</StyledTableCell>
               <StyledTableCell>
                 <Box
                   sx={{

@@ -18,6 +18,7 @@ const TransportListing = () => {
     duration: "",
     month: "",
     year: "",
+    service_fee: ""
   });
 
   const handleChange = (e) => {
@@ -55,6 +56,7 @@ const TransportListing = () => {
         duration: "",
         month: "",
         year: "",
+        service_fee: ""
       });
     } else {
       toast.error("Failed to Add!");
@@ -141,6 +143,13 @@ const TransportListing = () => {
             variant="outlined"
             value={payload.year}
             name="year"
+            onChange={handleChange}
+          />
+          <TextField
+            label="Service Fee"
+            variant="outlined"
+            value={payload.service_fee}
+            name="service_fee"
             onChange={handleChange}
           />
         </div>
