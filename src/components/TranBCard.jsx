@@ -27,9 +27,7 @@ const TransBCard = ({ data }) => {
           Guest Details:
           <ul>
             {data.guest_details.map((guest, index) => (
-              <li key={index}>
-                {guest.fname} {guest.lname}
-              </li>
+              <li key={index}>{guest.name}</li>
             ))}
           </ul>
         </Typography>
@@ -48,6 +46,9 @@ const TransBCard = ({ data }) => {
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Mobile Number: {data.mobileNumber}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Passenger Name: {data.passengerName}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Email: {data.email}
