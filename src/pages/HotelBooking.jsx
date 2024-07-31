@@ -30,7 +30,6 @@ const HotelBooking = () => {
   const filteredData = selectedDate
     ? getData.filter((ele) => dayjs(ele.date_of_booking).isSame(selectedDate, "day"))
     : getData;
-
   return (
     <main className="commoin-booking-main">
       <div style={{ display: "flex", justifyContent: "space-between" }}>

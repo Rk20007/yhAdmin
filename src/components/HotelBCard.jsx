@@ -30,14 +30,19 @@ const HotelBCard = ({ data }) => {
           Guest Details:
           <ul>
             {data.guest_details.map((guest, index) => (
-              <li key={index}>
-                {guest.fname} {guest.lname}
-              </li>
+              <li key={index}>{guest.name}</li>
             ))}
           </ul>
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Add-ons: {data.add_ons.join(", ")}
+          Add-ons:
+          <ul>
+            <li>breakfast - {data.add_ons[0].breakfast ? "Yes" : "No"}</li>
+            <li>extraBed {data.add_ons[0].extraBed ? "Yes" : "No"}</li>
+            <li>meal {data.add_ons[0].meal ? "Yes" : "No"}</li>
+            <li>parking {data.add_ons[0].parking ? "Yes" : "No"}</li>
+            <li>wifi {data.add_ons[0].wifi ? "Yes" : "No"}</li>
+          </ul>
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Total Amount: ${data.total_amount}
@@ -56,6 +61,9 @@ const HotelBCard = ({ data }) => {
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Email: {data.email}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Passenger Name: {data.passenger_name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Date of Booking: {new Date(data.date_of_booking).toLocaleDateString()}
