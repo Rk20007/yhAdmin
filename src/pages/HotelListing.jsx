@@ -125,8 +125,8 @@ const HotelListing = () => {
   return (
     <main className="HotelwithDeal">
       <section style={{ paddingRight: "200rem" }}>
-        <h1>Hotel Listing</h1>
-        <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+        <h1>Top Rated Hotels</h1>
+        <div style={{ display: "flex", flexDirection: "column", gap: "15px", paddingRight: "100rem" }}>
           <TextField
             label="Hotel Name"
             variant="outlined"
@@ -135,50 +135,53 @@ const HotelListing = () => {
             onChange={handleChange}
           />
           <TextField
-            label="City"
+            label="Enter City"
             variant="outlined"
             value={payload.city}
             name="city"
             onChange={handleChange}
           />
           <TextField
-            label="Country"
+            label="Enter Country"
             variant="outlined"
             value={payload.country}
             name="country"
             onChange={handleChange}
           />
           <TextField
-            label="State"
+            label="Enter State"
             variant="outlined"
             value={payload.state}
             name="state"
             onChange={handleChange}
           />
           <TextField
-            label="Image URL"
+            label="Enter Image URL"
             variant="outlined"
             value={payload.image}
             name="image"
             onChange={handleChange}
           />
           <TextField
-            label="Reviews"
+            label="Enter Reviews Count"
             variant="outlined"
+            type="number"
             value={payload.reviews}
             name="reviews"
             onChange={handleChange}
           />
           <TextField
-            label="Price"
+            label="Enter Price"
             variant="outlined"
             value={payload.price}
             name="price"
+            type="number"
             onChange={handleChange}
           />
           <TextField
-            label="Rooms Available"
+            label="Enter Rooms Available Count"
             variant="outlined"
+            type="number"
             value={payload.room_avaliable_count}
             name="room_avaliable_count"
             onChange={handleChange}
@@ -191,98 +194,104 @@ const HotelListing = () => {
             onChange={handleChange}
           /> */}
           <TextField
-            label="Recommended"
+            label="Enter Recommended Text as per in Drop Down"
             variant="outlined"
             value={payload.recommended}
             name="recommended"
             onChange={handleChange}
           />
           <TextField
-            label="Guest Rating"
+            label="Enter Guest Rating Text as per in Drop Down"
             variant="outlined"
             value={payload.guest_rating}
             name="guest_rating"
             onChange={handleChange}
           />
           <TextField
-            label="Star Category"
+            label="Enter Star Category Count"
             variant="outlined"
+            type="number"
             value={payload.star_category}
             name="star_category"
             onChange={handleChange}
           />
           <TextField
-            label="Description Bed"
+            label="Enter Description Bed count"
             variant="outlined"
+            type="number"
             value={payload.descriptionbed}
             name="descriptionbed"
             onChange={handleChange}
           />
           <TextField
-            label="Description Dedicated"
+            label="Enter Description Dedicated"
             variant="outlined"
             value={payload.descriptionDedicated}
             name="descriptionDedicated"
             onChange={handleChange}
           />
           <TextField
-            label="Description About"
+            label="Enter Description About"
             variant="outlined"
             value={payload.description_about}
             name="description_about"
             onChange={handleChange}
           />
           <TextField
-            label="Service Fee"
+            label="Enter Service Fee"
             variant="outlined"
+            type="number"
             value={payload.description_price_breakup_serviceFee}
             name="description_price_breakup_serviceFee"
             onChange={handleChange}
           />
           <TextField
-            label="Tax Fee"
+            label="Enter Tax Fee"
             variant="outlined"
+            type="number"
             value={payload.description_price_breakup_taxFee}
             name="description_price_breakup_taxFee"
             onChange={handleChange}
           />
           <TextField
-            label="Non-Refundable"
+            label="Enter Non-Refundable"
             variant="outlined"
+            type="number"
             value={payload.description_nonRefundable}
             name="description_nonRefundable"
             onChange={handleChange}
           />
           <TextField
-            label="Refundable"
+            label="Enter Refundable amount"
             variant="outlined"
+            type="number"
             value={payload.description_Refundable}
             name="description_Refundable"
             onChange={handleChange}
           />
           <TextField
-            label="Cancellation Before"
+            label="Enter Cancellation Before"
             variant="outlined"
             value={payload.description_cancellation_before}
             name="description_cancellation_before"
             onChange={handleChange}
           />
           <TextField
-            label="Partial Cancellation Before"
+            label="Enter Partial Cancellation Before"
             variant="outlined"
             value={payload.description_cancellation_before_partial}
             name="description_cancellation_before_partial"
             onChange={handleChange}
           />
           <TextField
-            label="Google Map"
+            label="Enter Google Map"
             variant="outlined"
             value={payload.description_google_map}
             name="description_google_map"
             onChange={handleChange}
           />
           <TextField
-            label="Hotel Details"
+            label="Enter Hotel Details"
             variant="outlined"
             value={payload.description_hotel_details}
             name="description_hotel_details"
