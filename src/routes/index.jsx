@@ -39,6 +39,7 @@ import TransportBooking from "../pages/TransportBooking.jsx";
 import YHotelBooking from "../pages/YHotelBooking.jsx";
 import YHApartmentBooking from "../pages/YHApartmentBooking.jsx";
 import HolidayBooking from "../pages/HolidayBooking.jsx";
+import Partners from "../pages/Partners.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -192,7 +193,11 @@ export const router = createBrowserRouter([
       {
         path: "/admin/secure/holiday-booking-details",
         element: <ProtectedRoute Component={HolidayBooking} />,
-      }
+      },
+      {
+        path: "/admin/secure/ourPartners",
+        element: <ProtectedRoute Component={Partners} />,
+      },
     ],
   },
 ]);

@@ -108,6 +108,19 @@ export default function HolidayPacModal({
             />
             <TextField
               id="outlined-basic"
+              label="Enter Sub Description"
+              value={updateData.sub_desc}
+              variant="outlined"
+              name="sub_desc"
+              onChange={(e) =>
+                setUpdateData({
+                  ...updateData,
+                  [e.target.name]: e.target.value,
+                })
+              }
+            />
+            <TextField
+              id="outlined-basic"
               label="Enter Price"
               value={updateData.price}
               variant="outlined"

@@ -67,6 +67,15 @@ export default function ServiceTable({ offers, getOffers }) {
             <StyledTableCell align="center">ID</StyledTableCell>
             <StyledTableCell align="center">Title</StyledTableCell>
             <StyledTableCell align="center">Image</StyledTableCell>
+            <StyledTableCell align="center">Sub Image1</StyledTableCell>
+            <StyledTableCell align="center">Sub Image2</StyledTableCell>
+            <StyledTableCell align="center">Description</StyledTableCell>
+            <StyledTableCell align="center">
+              Provide Description
+            </StyledTableCell>
+            <StyledTableCell align="center">
+              Service Description
+            </StyledTableCell>
             <StyledTableCell align="center">Action</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -82,6 +91,30 @@ export default function ServiceTable({ offers, getOffers }) {
                   style={{ width: "100px", height: "100px" }}
                 />
               </StyledTableCell>
+              <StyledTableCell align="center">
+                <img
+                  src={ele.sub_img1}
+                  alt="sub_img1"
+                  style={{ width: "100px", height: "100px" }}
+                />
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                <img
+                  src={ele.sub_img2}
+                  alt="sub_img2"
+                  style={{ width: "100px", height: "100px" }}
+                />
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                {ele.description}
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                {ele.provide_desc}
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                {ele.service_desc}
+              </StyledTableCell>
+
               <StyledTableCell>
                 <Box
                   sx={{

@@ -94,6 +94,79 @@ export default function ServiceModal({
                 })
               }
             />
+            <TextField
+              id="outlined-basic"
+              label="Enter Sub Image 1"
+              variant="outlined"
+              name="sub_img1"
+              fullWidth
+              value={updateData?.sub_img1}
+              onChange={(e) =>
+                setUpdateData({
+                  ...updateData,
+                  [e.target.name]: e.target.value,
+                })
+              }
+            />
+            <TextField
+              id="outlined-basic"
+              label="Enter Sub Image 2"
+              variant="outlined"
+              name="sub_img2"
+              fullWidth
+              value={updateData?.sub_img2}
+              onChange={(e) =>
+                setUpdateData({
+                  ...updateData,
+                  [e.target.name]: e.target.value,
+                })
+              }
+            />
+            <TextField
+              id="outlined-basic"
+              label="Enter Description"
+              variant="outlined"
+              name="description"
+              fullWidth
+              value={updateData?.description}
+              onChange={(e) =>
+                setUpdateData({
+                  ...updateData,
+                  [e.target.name]: e.target.value,
+                })
+              }
+            />
+
+            <TextField
+              id="outlined-basic"
+              label="Enter Provide Description"
+              variant="outlined"
+              name="provide_desc"
+              fullWidth
+              value={updateData?.provide_desc}
+              onChange={(e) =>
+                setUpdateData({
+                  ...updateData,
+                  [e.target.name]: e.target.value,
+                })
+              }
+            />
+
+            <TextField
+              id="outlined-basic"
+              label="Enter Service Description"
+              variant="outlined"
+              name="service_desc"
+              fullWidth
+              value={updateData?.service_desc}
+              onChange={(e) =>
+                setUpdateData({
+                  ...updateData,
+                  [e.target.name]: e.target.value,
+                })
+              }
+            />
+
             <Button
               variant="contained"
               onClick={handleUpdate}

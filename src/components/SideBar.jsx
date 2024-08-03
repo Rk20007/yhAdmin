@@ -27,6 +27,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import ChecklistIcon from "@mui/icons-material/Checklist";
+import HandshakeIcon from '@mui/icons-material/Handshake';
 
 const drawerWidth = 240;
 
@@ -253,6 +254,11 @@ export default function SideBar({ children }) {
       path: "/admin/secure/socialMedia",
       icon: <ShareIcon />,
     },
+    {
+      text: "Our Partners",
+      path: "/admin/secure/ourPartners",
+      icon: <HandshakeIcon />,
+    }
   ];
 
   return (

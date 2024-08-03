@@ -9,6 +9,11 @@ const Services = () => {
   const [payload, setPayload] = useState({
     title: "",
     img: "",
+    sub_img1: "",
+    sub_img2: "",
+    description: "",
+    provide_desc: "",
+    service_desc: "",
   });
 
   const handleChange = (e) => {
@@ -31,6 +36,11 @@ const Services = () => {
       setPayload({
         title: "",
         img: "",
+        sub_img1: "",
+        sub_img2: "",
+        description: "",
+        provide_desc: "",
+        service_desc: "",
       });
     } else {
       toast.error("Failed to Add!");
@@ -56,6 +66,46 @@ const Services = () => {
             value={payload.img}
             variant="outlined"
             name="img"
+            onChange={handleChange}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Enter Sub Image 1"
+            value={payload.sub_img1}
+            variant="outlined"
+            name="sub_img1"
+            onChange={handleChange}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Enter Sub Image 2"
+            value={payload.sub_img2}
+            variant="outlined"
+            name="sub_img2"
+            onChange={handleChange}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Enter Description"
+            value={payload.description}
+            variant="outlined"
+            name="description"
+            onChange={handleChange}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Enter Provide Description"
+            value={payload.provide_desc}
+            variant="outlined"
+            name="provide_desc"
+            onChange={handleChange}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Enter Service Description"
+            value={payload.service_desc}
+            variant="outlined"
+            name="service_desc"
             onChange={handleChange}
           />
         </div>

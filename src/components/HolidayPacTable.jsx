@@ -70,6 +70,8 @@ export default function HolidayPacTable({ deals, getDeals }) {
             <StyledTableCell align="center">Image</StyledTableCell>
             <StyledTableCell align="center">Title</StyledTableCell>
             <StyledTableCell align="center">Description</StyledTableCell>
+            <StyledTableCell align="center">Sub Description</StyledTableCell>
+            <StyledTableCell align="center">Place Details</StyledTableCell>
             <StyledTableCell align="center">Price</StyledTableCell>
             <StyledTableCell align="center">Action</StyledTableCell>
           </TableRow>
@@ -78,14 +80,35 @@ export default function HolidayPacTable({ deals, getDeals }) {
           {deals?.map((ele) => (
             <StyledTableRow key={ele._id}>
               <StyledTableCell align="center">{ele._id}</StyledTableCell>
-              <StyledTableCell align="center"><img
+              <StyledTableCell align="center">
+                <img
                   src={ele.img}
                   alt="img"
                   style={{ width: "100px", height: "100px" }}
-                /></StyledTableCell>
+                />
+              </StyledTableCell>
               <StyledTableCell align="center">{ele.title}</StyledTableCell>
               <StyledTableCell align="center">
                 {ele.description}
+              </StyledTableCell>
+              <StyledTableCell align="center">{ele.sub_desc}</StyledTableCell>
+              <StyledTableCell align="center">
+                {ele.placeData.map((data) => {
+                  return (
+                    <ul>
+                      <li>{data.title}</li>
+                      <li>{data.description}</li>
+                      <li>{data.list_desc}</li>
+                      <li>
+                        <img
+                          src={data.image}
+                          alt="img"
+                          style={{ width: "100px", height: "100px" }}
+                        />
+                      </li>
+                    </ul>
+                  );
+                })}
               </StyledTableCell>
               <StyledTableCell align="center">₹{ele.price}</StyledTableCell>
               <StyledTableCell>
