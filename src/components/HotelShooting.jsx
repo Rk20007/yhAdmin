@@ -123,9 +123,9 @@ const HotelShooting = () => {
 
   return (
     <main className="HotelwithDeal">
-      <section style={{ paddingRight: "200rem" }}>
+      <section>
         <h1>Near by Shooting Range Hotels</h1>
-        <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "15px", paddingRight: '200rem' }}>
           <TextField
             label="Hotel Name"
             variant="outlined"
