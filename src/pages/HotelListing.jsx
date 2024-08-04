@@ -428,7 +428,7 @@ const HotelListing = () => {
           >
             Add Amenity
           </Button>
-          <h3>Nearby Hotels</h3>
+          {/* <h3>Nearby Hotels</h3>
           {payload.description_nearBy_hotels.map((hotel, index) => (
             <div key={index}>
               <TextField
@@ -544,7 +544,7 @@ const HotelListing = () => {
             }
           >
             Add Nearby Hotel
-          </Button>
+          </Button> */}
         </div>
         <Button
           variant="contained"
