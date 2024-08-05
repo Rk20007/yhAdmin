@@ -44,7 +44,7 @@ const Login = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "70vh",
+        minHeight: "85vh",
       }}
     >
       <Paper elevation={10} sx={{ borderRadius: "15px" }}>
@@ -87,6 +87,12 @@ const Login = () => {
             onChange={handleChange}
             onKeyDown={handleKeyDown}
           />
+          <div
+            className="admin-text"
+            onClick={() => nav("/admin/secure/verifyCode")}
+          >
+            Click for Make Admin ID
+          </div>
           <Button
             variant="contained"
             color="secondary"

@@ -64,3 +64,11 @@ body {
   padding-left: 1rem;
   padding-right: 2rem;
 }
+.admin-text {
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: sans-serif;
+  color: gray;
+  text-align: end;
+}

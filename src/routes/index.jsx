@@ -40,6 +40,7 @@ import YHotelBooking from "../pages/YHotelBooking.jsx";
 import YHApartmentBooking from "../pages/YHApartmentBooking.jsx";
 import HolidayBooking from "../pages/HolidayBooking.jsx";
 import Partners from "../pages/Partners.jsx";
+import VerifyCode from "../pages/VerifyCode.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -197,6 +198,10 @@ export const router = createBrowserRouter([
       {
         path: "/admin/secure/ourPartners",
         element: <ProtectedRoute Component={Partners} />,
+      },
+      {
+        path: "/admin/secure/verifyCode",
+        element: <ProtectedRoute Component={VerifyCode} />,
       },
     ],
   },
