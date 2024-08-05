@@ -41,6 +41,7 @@ import YHApartmentBooking from "../pages/YHApartmentBooking.jsx";
 import HolidayBooking from "../pages/HolidayBooking.jsx";
 import Partners from "../pages/Partners.jsx";
 import VerifyCode from "../pages/VerifyCode.jsx";
+import ImageUpload from "../pages/ImageUpload.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -203,6 +204,10 @@ export const router = createBrowserRouter([
         path: "/admin/secure/verifyCode",
         element: <ProtectedRoute Component={VerifyCode} />,
       },
+      // {
+      //   path: "/admin/secure/image-upload",
+      //   element: <ProtectedRoute Component={ImageUpload} />,
+      // },
     ],
   },
 ]);

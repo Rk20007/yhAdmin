@@ -6,6 +6,7 @@ import {
   HolidayPackageGetAPI,
 } from "../api/holidayPackage.api";
 import HolidayPacTable from "../components/HolidayPacTable";
+import ImageUpload from "./ImageUpload";
 
 const initialPlaceData = [
   { image: "", title: "", description: "", list_desc: "" },
@@ -166,6 +167,10 @@ const HolidayPackage = () => {
         >
           Add Details
         </Button>
+      </section>
+
+      <section>
+        <ImageUpload />
       </section>
 
       <section

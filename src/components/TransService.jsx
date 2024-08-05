@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { TransAddServiceAPI, TransGetServiceAPI } from "../api/transport.api";
 import TransOfferTable from "./TransOffTable";
 import TransServiceTable from "./TransServiceTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const TransService = () => {
   const [services, setServices] = useState([]);
@@ -78,6 +79,9 @@ const TransService = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

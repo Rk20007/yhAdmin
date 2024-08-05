@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import toast from "react-hot-toast";
 import { YHHotelAddAPI, YHHotelGetAPI } from "../api/yhHotel.api";
 import YHHotelTable from "./YHHotelTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const YHHotel = () => {
   const [deals, setDeals] = useState([]);
@@ -121,6 +122,9 @@ const YHHotel = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

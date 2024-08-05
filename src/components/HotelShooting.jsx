@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import toast from "react-hot-toast";
 import axios from "axios";
 import HotelListingTable from "../components/HListingTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const HotelShooting = () => {
   const [deals, setDeals] = useState([]);
@@ -125,13 +126,14 @@ const HotelShooting = () => {
     <main className="HotelwithDeal">
       <section>
         <h1>Near by Shooting Range Hotels</h1>
-        <div style={{ display: "flex", flexDirection: "column", gap: "15px", paddingRight: '200rem' }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
           <TextField
             label="Hotel Name"
             variant="outlined"
             value={payload.hotelName}
             name="hotelName"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter City"
@@ -139,6 +141,7 @@ const HotelShooting = () => {
             value={payload.city}
             name="city"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Country"
@@ -146,6 +149,7 @@ const HotelShooting = () => {
             value={payload.country}
             name="country"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter State"
@@ -153,6 +157,7 @@ const HotelShooting = () => {
             value={payload.state}
             name="state"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Image URL"
@@ -160,6 +165,7 @@ const HotelShooting = () => {
             value={payload.image}
             name="image"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Reviews Count"
@@ -168,6 +174,7 @@ const HotelShooting = () => {
             value={payload.reviews}
             name="reviews"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Price"
@@ -176,6 +183,7 @@ const HotelShooting = () => {
             name="price"
             type="number"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Rooms Available Count"
@@ -184,6 +192,7 @@ const HotelShooting = () => {
             value={payload.room_avaliable_count}
             name="room_avaliable_count"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           {/* <TextField
             label="Hotel Show"
@@ -198,6 +207,7 @@ const HotelShooting = () => {
             value={payload.recommended}
             name="recommended"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Guest Rating Text as per in Drop Down"
@@ -205,6 +215,7 @@ const HotelShooting = () => {
             value={payload.guest_rating}
             name="guest_rating"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Star Category Count"
@@ -213,6 +224,7 @@ const HotelShooting = () => {
             value={payload.star_category}
             name="star_category"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Description Bed count"
@@ -221,6 +233,7 @@ const HotelShooting = () => {
             value={payload.descriptionbed}
             name="descriptionbed"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Description Dedicated"
@@ -228,6 +241,7 @@ const HotelShooting = () => {
             value={payload.descriptionDedicated}
             name="descriptionDedicated"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Description About"
@@ -235,6 +249,7 @@ const HotelShooting = () => {
             value={payload.description_about}
             name="description_about"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Service Fee"
@@ -243,6 +258,7 @@ const HotelShooting = () => {
             value={payload.description_price_breakup_serviceFee}
             name="description_price_breakup_serviceFee"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Tax Fee"
@@ -251,6 +267,7 @@ const HotelShooting = () => {
             value={payload.description_price_breakup_taxFee}
             name="description_price_breakup_taxFee"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Non-Refundable"
@@ -259,6 +276,7 @@ const HotelShooting = () => {
             value={payload.description_nonRefundable}
             name="description_nonRefundable"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Refundable amount"
@@ -267,6 +285,7 @@ const HotelShooting = () => {
             value={payload.description_Refundable}
             name="description_Refundable"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Cancellation Before"
@@ -274,6 +293,7 @@ const HotelShooting = () => {
             value={payload.description_cancellation_before}
             name="description_cancellation_before"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Partial Cancellation Before"
@@ -281,6 +301,7 @@ const HotelShooting = () => {
             value={payload.description_cancellation_before_partial}
             name="description_cancellation_before_partial"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Google Map"
@@ -288,6 +309,7 @@ const HotelShooting = () => {
             value={payload.description_google_map}
             name="description_google_map"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <TextField
             label="Enter Hotel Details"
@@ -295,6 +317,7 @@ const HotelShooting = () => {
             value={payload.description_hotel_details}
             name="description_hotel_details"
             onChange={handleChange}
+            style={{ width: "500px" }}
           />
           <h3>Description Images</h3>
           {payload.descriptionImages.map((img, index) => (
@@ -311,6 +334,7 @@ const HotelShooting = () => {
                     "descriptionImages"
                   )
                 }
+                style={{ width: "500px" }}
               />
               <Button onClick={() => removeField(index, "descriptionImages")}>
                 Remove
@@ -320,12 +344,13 @@ const HotelShooting = () => {
           <Button
             variant="outlined"
             onClick={() => addNewField("descriptionImages", "")}
+            style={{ width: "500px" }}
           >
             Add Image
           </Button>
           <h3>Description Reviews Data</h3>
           {payload.description_reviews_data.map((review, index) => (
-            <div key={index}>
+            <div key={index} style={{ display: "flex", gap: "10px", flexDirection: "column" }}>
               <TextField
                 label="Title"
                 variant="outlined"
@@ -338,6 +363,7 @@ const HotelShooting = () => {
                     "description_reviews_data"
                   )
                 }
+                style={{ width: "500px" }}
               />
               <TextField
                 label="Date"
@@ -351,6 +377,7 @@ const HotelShooting = () => {
                     "description_reviews_data"
                   )
                 }
+                style={{ width: "500px" }}
               />
               <TextField
                 label="Review"
@@ -364,6 +391,7 @@ const HotelShooting = () => {
                     "description_reviews_data"
                   )
                 }
+                style={{ width: "500px" }}
               />
               <TextField
                 label="Rating"
@@ -377,9 +405,11 @@ const HotelShooting = () => {
                     "description_reviews_data"
                   )
                 }
+                style={{ width: "500px" }}
               />
               <Button
                 onClick={() => removeField(index, "description_reviews_data")}
+                style={{ width: "500px" }}
               >
                 Remove
               </Button>
@@ -395,6 +425,7 @@ const HotelShooting = () => {
                 rating: "",
               })
             }
+            style={{ width: "500px" }}
           >
             Add Review
           </Button>
@@ -413,6 +444,7 @@ const HotelShooting = () => {
                     "description_amentities"
                   )
                 }
+                style={{ width: "500px" }}
               />
               <Button
                 onClick={() => removeField(index, "description_amentities")}
@@ -424,6 +456,7 @@ const HotelShooting = () => {
           <Button
             variant="outlined"
             onClick={() => addNewField("description_amentities", "")}
+            style={{ width: "500px" }}
           >
             Add Amenity
           </Button>
@@ -553,6 +586,9 @@ const HotelShooting = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

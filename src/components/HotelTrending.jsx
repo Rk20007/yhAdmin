@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { HotelAddTrendingAPI, HotelGetTrendingAPI } from "../api/hotel.api";
 import HotelOfferTable from "./HotelOffTable";
 import HotelTrendingTable from "./HotelTrendingTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const HotelTrending = () => {
   const [trending, setTrending] = useState([]);
@@ -100,6 +101,9 @@ const HotelTrending = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

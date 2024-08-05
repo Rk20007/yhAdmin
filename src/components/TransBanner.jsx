@@ -5,6 +5,7 @@ import { HotelAddBannerAPI, HotelGetBannerAPI } from "../api/hotel.api";
 import HotelBannerTable from "./HotelBanTable";
 import { TransportGetBannerAPI } from "../api/transport.api";
 import TransportBannerTable from "./TransBannerTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const TransBanner = () => {
   const [banner, setBanner] = useState([]);
@@ -65,6 +66,9 @@ const TransBanner = () => {
             Add Details
           </Button>
         </div>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

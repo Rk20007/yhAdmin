@@ -4,6 +4,7 @@ import { Add, Remove } from "@mui/icons-material";
 import toast from "react-hot-toast";
 import { GalleryAddAPI, GalleryGetAPI } from "../api/gallery.api";
 import GalleryTable from "../components/GalleryTable";
+import ImageUpload from "./ImageUpload";
 
 const TeamPhotosForm = () => {
   const [imgData, setImgData] = useState([]);
@@ -108,6 +109,9 @@ const TeamPhotosForm = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

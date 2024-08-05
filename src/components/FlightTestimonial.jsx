@@ -6,6 +6,7 @@ import {
 import { Button, TextField } from "@mui/material";
 import toast from "react-hot-toast";
 import TestimonialTable from "./FlightTestTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const FlightTestimonial = () => {
   const [testimonial, setTestimonial] = useState([]);
@@ -82,6 +83,9 @@ const FlightTestimonial = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

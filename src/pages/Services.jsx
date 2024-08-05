@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import toast from "react-hot-toast";
 import { ServiceAddAPI, ServiceGetAPI } from "../api/service.api";
 import ServiceTable from "../components/ServiceTable";
+import ImageUpload from "./ImageUpload";
 
 const Services = () => {
   const [offers, setOffers] = useState([]);
@@ -117,6 +118,9 @@ const Services = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

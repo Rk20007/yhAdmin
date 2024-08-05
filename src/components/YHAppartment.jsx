@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { YHHotelAddAPI, YHHotelGetAPI } from "../api/yhHotel.api";
 import YHHotelTable from "./YHHotelTable";
 import YHAppartmentTable from "./YHAppartmentTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const YHHotel = () => {
   const [deals, setDeals] = useState([]);
@@ -122,6 +123,9 @@ const YHHotel = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

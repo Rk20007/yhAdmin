@@ -28,6 +28,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import ChecklistIcon from "@mui/icons-material/Checklist";
 import HandshakeIcon from '@mui/icons-material/Handshake';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 const drawerWidth = 240;
 
@@ -258,7 +259,12 @@ export default function SideBar({ children }) {
       text: "Our Partners",
       path: "/admin/secure/ourPartners",
       icon: <HandshakeIcon />,
-    }
+    },
+    // {
+    //   text: "Image Upload",
+    //   path: "/admin/secure/image-upload",
+    //   icon: <CloudUploadIcon />,
+    // }
   ];
 
   return (

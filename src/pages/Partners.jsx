@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import toast from "react-hot-toast";
 import axios from "axios";
 import OurPartner from "../components/OurPartner";
+import ImageUpload from "./ImageUpload";
 
 const Partners = () => {
   const [trending, setTrending] = useState([]);
@@ -61,6 +62,9 @@ const Partners = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

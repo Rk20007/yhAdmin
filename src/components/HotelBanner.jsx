@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import toast from "react-hot-toast";
 import { HotelAddBannerAPI, HotelGetBannerAPI } from "../api/hotel.api";
 import HotelBannerTable from "./HotelBanTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const HotelBanner = () => {
   const [banner, setBanner] = useState([]);
@@ -63,6 +64,9 @@ const HotelBanner = () => {
             Add Details
           </Button>
         </div>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

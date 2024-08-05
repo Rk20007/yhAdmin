@@ -72,3 +72,12 @@ body {
   color: gray;
   text-align: end;
 }
+.image-upload {
+  margin-top: 6rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+.image-upload-main {
+  width: 100%;
+  height: 45vh;
+}

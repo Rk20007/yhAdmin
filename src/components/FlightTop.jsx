@@ -6,6 +6,7 @@ import {
 import { Button, TextField } from "@mui/material";
 import TopTables from "./TopTable";
 import toast from "react-hot-toast";
+import ImageUpload from "../pages/ImageUpload";
 
 const FlightTop = () => {
   const [destinations, setDestinations] = useState([]);
@@ -81,6 +82,9 @@ const FlightTop = () => {
         >
           Add Details
         </Button>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{

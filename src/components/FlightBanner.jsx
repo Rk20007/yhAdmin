@@ -7,6 +7,7 @@ import {
 import { Button, TextField } from "@mui/material";
 import toast from "react-hot-toast";
 import BannerTable from "./FlightBanTable";
+import ImageUpload from "../pages/ImageUpload";
 
 const FlightBanner = () => {
   const [banner, setBanner] = useState([]);
@@ -67,6 +68,9 @@ const FlightBanner = () => {
             Add Details
           </Button>
         </div>
+      </section>
+      <section>
+        <ImageUpload />
       </section>
       <section
         style={{
