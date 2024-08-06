@@ -11,6 +11,7 @@ const Login = () => {
     userId: "",
     password: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -26,11 +27,13 @@ const Login = () => {
       toast.error("Please fill all the fields");
       return;
     }
+    setLoading(true);
     const res = await LoginApi(payload);
     if (res.status) {
       toast.success(res.message);
       Cookies.set("YH_admin_token", res.data.token);
       localStorage.setItem("admin_name", res.data.name);
+      setLoading(false);
       setTimeout(() => {
         window.location.href = "/admin/secure/home";
       }, 1500);
@@ -98,8 +101,9 @@ const Login = () => {
             color="secondary"
             sx={{ height: "6vh" }}
             onClick={handleLogin}
+            disabled={loading}
           >
-            Login
+            {loading ? "Please wait..." : "Login" }
           </Button>
         </Box>
       </Paper>

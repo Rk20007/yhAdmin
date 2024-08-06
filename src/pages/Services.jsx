@@ -63,7 +63,7 @@ const Services = () => {
           />
           <TextField
             id="outlined-basic"
-            label="Enter Image"
+            label="Enter Image Link"
             value={payload.img}
             variant="outlined"
             name="img"
@@ -71,7 +71,7 @@ const Services = () => {
           />
           <TextField
             id="outlined-basic"
-            label="Enter Sub Image 1"
+            label="Enter Sub Image 1 Link"
             value={payload.sub_img1}
             variant="outlined"
             name="sub_img1"
@@ -79,7 +79,7 @@ const Services = () => {
           />
           <TextField
             id="outlined-basic"
-            label="Enter Sub Image 2"
+            label="Enter Sub Image 2 Link"
             value={payload.sub_img2}
             variant="outlined"
             name="sub_img2"

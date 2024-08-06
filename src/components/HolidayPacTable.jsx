@@ -71,7 +71,7 @@ export default function HolidayPacTable({ deals, getDeals }) {
             <StyledTableCell align="center">Title</StyledTableCell>
             <StyledTableCell align="center">Description</StyledTableCell>
             <StyledTableCell align="center">Sub Description</StyledTableCell>
-            <StyledTableCell align="center">Place Details</StyledTableCell>
+            {/* <StyledTableCell align="center">Place Details</StyledTableCell> */}
             <StyledTableCell align="center">Price</StyledTableCell>
             <StyledTableCell align="center">Action</StyledTableCell>
           </TableRow>
@@ -92,7 +92,7 @@ export default function HolidayPacTable({ deals, getDeals }) {
                 {ele.description}
               </StyledTableCell>
               <StyledTableCell align="center">{ele.sub_desc}</StyledTableCell>
-              <StyledTableCell align="center">
+              {/* <StyledTableCell align="center">
                 {ele.placeData.map((data) => {
                   return (
                     <ul>
@@ -109,7 +109,7 @@ export default function HolidayPacTable({ deals, getDeals }) {
                     </ul>
                   );
                 })}
-              </StyledTableCell>
+              </StyledTableCell> */}
               <StyledTableCell align="center">₹{ele.price}</StyledTableCell>
               <StyledTableCell>
                 <Box
