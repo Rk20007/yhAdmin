@@ -603,7 +603,7 @@ const HotelListing = () => {
           paddingBottom: "2rem",
         }}
       >
-        <HotelListingTable deals={deals} getDeals={getDeals} />
+        <HotelListingTable deals={deals} getDeals={getDeals} isHotelListing={true}/>
       </section>
     </main>
   );
