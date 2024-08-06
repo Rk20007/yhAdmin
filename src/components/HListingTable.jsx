@@ -31,19 +31,53 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-export default function HotelListingTable({ deals, getDeals }) {
+export default function HotelListingTable({
+  deals,
+  getDeals,
+  isTopRated,
+  isShootingRange,
+  isHotelListing,
+}) {
   const handleDelete = async (id) => {
-    const response = await axios.delete(
-      `${import.meta.env.VITE_APP_API_URL}api/v1/delete-hotelListing`,
-      {
-        data: { _id: id },
+    if (isTopRated) {
+      const response = await axios.delete(
+        `${import.meta.env.VITE_APP_API_URL}api/v1/delete-hotelswithdeal`,
+        {
+          data: { _id: id },
+        }
+      );
+      if (response.status) {
+        getDeals();
+        toast.success("Successfully Deleted");
+      } else {
+        toast.error("Failed to Delete");
       }
-    );
-    if (response.status) {
-      getDeals();
-      toast.success("Successfully Deleted");
-    } else {
-      toast.error("Failed to Delete");
+    } else if (isShootingRange) {
+      const response = await axios.delete(
+        `${import.meta.env.VITE_APP_API_URL}api/v1/delete-shootingrange`,
+        {
+          data: { _id: id },
+        }
+      );
+      if (response.status) {
+        getDeals();
+        toast.success("Successfully Deleted");
+      } else {
+        toast.error("Failed to Delete");
+      }
+    } else if (isHotelListing) {
+      const response = await axios.delete(
+        `${import.meta.env.VITE_APP_API_URL}api/v1/delete-hotelListing`,
+        {
+          data: { _id: id },
+        }
+      );
+      if (response.status) {
+        getDeals();
+        toast.success("Successfully Deleted");
+      } else {
+        toast.error("Failed to Delete");
+      }
     }
   };
 

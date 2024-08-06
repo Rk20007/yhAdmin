@@ -105,7 +105,7 @@ export default function ServiceTable({ offers, getOffers }) {
                   style={{ width: "100px", height: "100px" }}
                 />
               </StyledTableCell>
-              <StyledTableCell align="center">
+              <StyledTableCell align="center" width={"800px"}>
                 {ele.description}
               </StyledTableCell>
               <StyledTableCell align="center">

@@ -597,7 +597,7 @@ const HotelShooting = () => {
           paddingBottom: "2rem",
         }}
       >
-        <HotelListingTable deals={deals} getDeals={getDeals} />
+        <HotelListingTable deals={deals} getDeals={getDeals} isShootingRange={true}/>
       </section>
     </main>
   );

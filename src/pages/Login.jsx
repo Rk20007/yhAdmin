@@ -38,7 +38,8 @@ const Login = () => {
         window.location.href = "/admin/secure/home";
       }, 1500);
     } else {
-      toast.error(res.message);
+      toast.error("User not found");
+      setLoading(false);
     }
   };
   return (
@@ -103,7 +104,7 @@ const Login = () => {
             onClick={handleLogin}
             disabled={loading}
           >
-            {loading ? "Please wait..." : "Login" }
+            {loading ? "Please wait..." : "Login"}
           </Button>
         </Box>
       </Paper>

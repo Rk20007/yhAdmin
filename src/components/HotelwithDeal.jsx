@@ -597,7 +597,7 @@ const HotelwithDeal = () => {
           paddingBottom: "2rem",
         }}
       >
-        <HotelListingTable deals={deals} getDeals={getDeals} />
+        <HotelListingTable deals={deals} getDeals={getDeals} isTopRated={true}/>
       </section>
     </main>
   );
