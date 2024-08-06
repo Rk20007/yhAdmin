@@ -126,7 +126,7 @@ const HotelListing = () => {
   return (
     <main className="HotelwithDeal">
       <section>
-        <h1>Top Rated Hotels</h1>
+        <h1> Hotels Listing</h1>
         <div style={{ display: "flex", flexDirection: "column", gap: "15px"}}>
           <TextField
             label="Hotel Name"
