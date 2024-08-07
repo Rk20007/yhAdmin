@@ -28,6 +28,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import ChecklistIcon from "@mui/icons-material/Checklist";
 import HandshakeIcon from '@mui/icons-material/Handshake';
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 const drawerWidth = 240;
@@ -42,6 +45,12 @@ export default function SideBar({ children }) {
   const [openSupportMenu, setOpenSupportMenu] = useState(false);
   const [openListingMenu, setOpenListingMenu] = useState(false);
   const [openBookikngMenu, setOpenBookikngMenu] = useState(false);
+  const [sidebarExpanded, setSidebarExpanded] = useState(false);
+  
+    const toggleSidebar = () => {
+      setSidebarExpanded(!sidebarExpanded);
+    };
+
 
   const handleFlightMenuClick = () => {
     setOpenFlightMenu(!openFlightMenu);
@@ -272,13 +281,14 @@ export default function SideBar({ children }) {
       <CssBaseline />
       <Drawer
         sx={{
-          width: drawerWidth,
+          width: sidebarExpanded ? drawerWidth : 64,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: drawerWidth,
+            width: sidebarExpanded ? drawerWidth : 64,
             boxSizing: "border-box",
             marginTop: "65px",
             height: "calc(100% - 65px)",
+            transition: "width 0.3s",
           },
         }}
         variant="permanent"
@@ -295,6 +305,16 @@ export default function SideBar({ children }) {
             "scrollbar-width": "none",
           }}
         >
+          <IconButton
+            onClick={toggleSidebar}
+            sx={{
+              margin: "8px",
+              transition: "transform 0.3s",
+              transform: sidebarExpanded ? "rotate(180deg)" : "rotate(0deg)",
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
           <List>
             {menuItems.map((item, index) => (
               <React.Fragment key={item.text}>
@@ -306,8 +326,8 @@ export default function SideBar({ children }) {
                     onClick={item.hasSubmenu ? item.handleClick : null}
                   >
                     <ListItemIcon>{item.icon}</ListItemIcon>
-                    <ListItemText primary={item.text} />
-                    {item.hasSubmenu ? (
+                    {sidebarExpanded && <ListItemText primary={item.text} />}
+                    {item.hasSubmenu && sidebarExpanded ? (
                       item.open ? (
                         <ExpandLessIcon />
                       ) : (
@@ -317,7 +337,11 @@ export default function SideBar({ children }) {
                   </ListItemButton>
                 </ListItem>
                 {item.hasSubmenu && (
-                  <Collapse in={item.open} timeout="auto" unmountOnExit>
+                  <Collapse
+                    in={item.open && sidebarExpanded}
+                    timeout="auto"
+                    unmountOnExit
+                  >
                     <List component="div" disablePadding>
                       {item.submenuItems.map((subItem) => (
                         <ListItem key={subItem.text} disablePadding>
@@ -327,7 +351,9 @@ export default function SideBar({ children }) {
                             sx={{ pl: 4 }}
                             selected={location.pathname === subItem.path}
                           >
-                            <ListItemText primary={subItem.text} />
+                            {sidebarExpanded && (
+                              <ListItemText primary={subItem.text} />
+                            )}
                           </ListItemButton>
                         </ListItem>
                       ))}

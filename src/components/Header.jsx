@@ -38,6 +38,7 @@ export default function Header() {
           position: `${loaction.pathname === "/" ? "unset" : "fixed"}`,
           width: `${loaction.pathname === "/" ? "unset" : "100%"}`,
           zIndex: "999",
+          backgroundColor: "#624fa8",
         }}
       >
         <Toolbar>
