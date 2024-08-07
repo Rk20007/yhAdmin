@@ -9,6 +9,7 @@ const SocialMedia = () => {
     twitter: "",
     instagram: "",
     linkedin: "",
+    youtube: "",
   });
   const handleChange = (e) => {
     setPayload({ ...payload, [e.target.name]: e.target.value });
@@ -74,6 +75,13 @@ const SocialMedia = () => {
         variant="outlined"
         value={payload.linkedin}
         name="linkedin"
+        onChange={handleChange}
+      />
+      <TextField
+        label="Youtube"
+        variant="outlined"
+        value={payload.youtube}
+        name="youtube"
         onChange={handleChange}
       />
       <Button variant="contained" color="secondary" onClick={handleSubmit}>
