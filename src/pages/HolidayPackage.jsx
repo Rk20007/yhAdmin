@@ -132,35 +132,35 @@ const HolidayPackage = () => {
         <h1>Holiday Packages</h1>
         <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
           <TextField
-            label="Enter Image"
+            label="Enter Image Link"
             value={payload.img}
             variant="outlined"
             name="img"
             onChange={handleChange}
           />
           <TextField
-            label="Enter Title"
+            label="Enter Package Title"
             value={payload.title}
             variant="outlined"
             name="title"
             onChange={handleChange}
           />
           <TextField
-            label="Enter Description"
+            label="Enter Tour Details (eg: 2 Days 3 Nights)"
             value={payload.description}
             variant="outlined"
             name="description"
             onChange={handleChange}
           />
           <TextField
-            label="Enter Sub Description"
+            label="Enter Sub Description for package"
             value={payload.sub_desc}
             variant="outlined"
             name="sub_desc"
             onChange={handleChange}
           />
           <TextField
-            label="Enter Price"
+            label="Enter Package Price"
             value={payload.price}
             variant="outlined"
             name="price"
