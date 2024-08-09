@@ -36,7 +36,7 @@ const PaymentCard = ({ data }) => {
             razorpay_payment_id: {data.razorpay_payment_id}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            razorpay_signature: {data.razorpay_signature}
+            razorpay_signature: {data.razorpay_signature?.substring(0, 22)}
           </Typography>
         </Box>
       </CardContent>
