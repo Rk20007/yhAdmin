@@ -57,16 +57,28 @@ const HolidayPackage = () => {
       const res = await HolidayPackageAddAPI(payload);
       if (res.status) {
         toast.success("Successfully Added!");
-        getDeals();
+
+        // Reset the place data first
+        const resetPlace = initialPlaceData.map(() => ({
+          image: "",
+          title: "",
+          description: "",
+          list_desc: "",
+        }));
+
+        setPlace(resetPlace);
+
+        // Now reset the payload with the updated place data
         setPayload({
           img: "",
           title: "",
           description: "",
           price: "",
           sub_desc: "",
-          placeData: initialPlaceData,
+          placeData: resetPlace,
         });
-        setPlace(initialPlaceData);
+
+        getDeals();
       } else {
         toast.error("Failed to Add!");
       }
