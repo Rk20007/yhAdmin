@@ -45,169 +45,166 @@ import ImageUpload from "../pages/ImageUpload.jsx";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/admin-yh/",
     element: <CommonElement />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <ProtectedRoute Component={Login} />,
       },
       {
-        path: "/admin/secure/home",
+        path: "/admin-yh/secure/home",  // Changed from /admin/secure/home to secure/home
         element: <ProtectedRoute Component={Homepage} />,
       },
       {
-        path: "/admin/secure/flight-top-destination",
+        path: "/admin-yh/secure/flight-top-destination",
         element: <ProtectedRoute Component={FlightTop} />,
       },
       {
-        path: "/admin/secure/flight-offer",
+        path: "/admin-yh/secure/flight-offer",
         element: <ProtectedRoute Component={FlightsOffer} />,
       },
       {
-        path: "/admin/secure/flight-banner",
+        path: "/admin-yh/secure/flight-banner",
         element: <ProtectedRoute Component={FlightBanner} />,
       },
       {
-        path: "/admin/secure/flight-testimonial",
+        path: "/admin-yh/secure/flight-testimonial",
         element: <ProtectedRoute Component={FlightTestimonial} />,
       },
       {
-        path: "/admin/secure/hotel-banner",
+        path: "/admin-yh/secure/hotel-banner",
         element: <ProtectedRoute Component={HotelBanner} />,
       },
       {
-        path: "/admin/secure/hotel-offer",
+        path: "/admin-yh/secure/hotel-offer",
         element: <ProtectedRoute Component={HotelOffer} />,
       },
       {
-        path: "/admin/secure/hotel-hotelswithdeal",
+        path: "/admin-yh/secure/hotel-hotelswithdeal",
         element: <ProtectedRoute Component={HotelwithDeal} />,
       },
       {
-        path: "/admin/secure/hotel-trending-gateway",
+        path: "/admin-yh/secure/hotel-trending-gateway",
         element: <ProtectedRoute Component={HotelTrending} />,
       },
       {
-        path: "/admin/secure/hotel-shooting-range",
+        path: "/admin-yh/secure/hotel-shooting-range",
         element: <ProtectedRoute Component={HotelShooting} />,
       },
       {
-        path: "/admin/secure/transport-banner",
+        path: "/admin-yh/secure/transport-banner",
         element: <ProtectedRoute Component={TransBanner} />,
       },
       {
-        path: "/admin/secure/transport-offer",
+        path: "/admin-yh/secure/transport-offer",
         element: <ProtectedRoute Component={TransOffer} />,
       },
       {
-        path: "/admin/secure/transport-services",
+        path: "/admin-yh/secure/transport-services",
         element: <ProtectedRoute Component={TransService} />,
       },
       {
-        path: "/admin/secure/offer-flight",
+        path: "/admin-yh/secure/offer-flight",
         element: <ProtectedRoute Component={OfferFlight} />,
       },
       {
-        path: "/admin/secure/offer-hotel",
+        path: "/admin-yh/secure/offer-hotel",
         element: <ProtectedRoute Component={OfferHotel} />,
       },
       {
-        path: "/admin/secure/offer-transport",
+        path: "/admin-yh/secure/offer-transport",
         element: <ProtectedRoute Component={OfferTrans} />,
       },
       {
-        path: "/admin/secure/holidayPackage",
+        path: "/admin-yh/secure/holidayPackage",
         element: <ProtectedRoute Component={HolidayPackage} />,
       },
       {
-        path: "/admin/secure/gallery",
+        path: "/admin-yh/secure/gallery",
         element: <ProtectedRoute Component={Gallery} />,
       },
       {
-        path: "/admin/secure/services",
+        path: "/admin-yh/secure/services",
         element: <ProtectedRoute Component={Services} />,
       },
       {
-        path: "/admin/secure/support-pending",
+        path: "/admin-yh/secure/support-pending",
         element: <ProtectedRoute Component={Support} />,
       },
       {
-        path: "/admin/secure/userDetail",
+        path: "/admin-yh/secure/userDetail",
         element: <ProtectedRoute Component={UserDetail} />,
       },
       {
-        path: "/admin/secure/bookingDetail",
+        path: "/admin-yh/secure/bookingDetail",
         element: <ProtectedRoute Component={BookingDetail} />,
       },
       {
-        path: "/admin/secure/paymentDetail",
+        path: "/admin-yh/secure/paymentDetail",
         element: <ProtectedRoute Component={PaymentDetail} />,
       },
       {
-        path: "/admin/secure/whyBook",
+        path: "/admin-yh/secure/whyBook",
         element: <ProtectedRoute Component={WhyBook} />,
       },
       {
-        path: "/admin/secure/socialMedia",
+        path: "/admin-yh/secure/socialMedia",
         element: <ProtectedRoute Component={SocialMedia} />,
       },
       {
-        path: "/admin/secure/yh-hotel",
+        path: "/admin-yh/secure/yh-hotel",
         element: <ProtectedRoute Component={YHHotel} />,
       },
       {
-        path: "/admin/secure/yh-appartment",
+        path: "/admin-yh/secure/yh-appartment",
         element: <ProtectedRoute Component={YHAppartment} />,
       },
       {
-        path: "/admin/secure/support-solved",
+        path: "/admin-yh/secure/support-solved",
         element: <ProtectedRoute Component={SupportSolved} />,
       },
       {
-        path: "/admin/secure/user-details",
+        path: "/admin-yh/secure/user-details",
         element: <ProtectedRoute Component={UserDetails} />,
       },
       {
-        path: "/admin/secure/hotel-listing-details",
+        path: "/admin-yh/secure/hotel-listing-details",
         element: <ProtectedRoute Component={HotelListing} />,
       },
       {
-        path: "/admin/secure/transport-listing-details",
+        path: "/admin-yh/secure/transport-listing-details",
         element: <ProtectedRoute Component={TransportListing} />,
       },
       {
-        path: "/admin/secure/hotel-booking-details",
+        path: "/admin-yh/secure/hotel-booking-details",
         element: <ProtectedRoute Component={HotelBooking} />,
       },
       {
-        path: "/admin/secure/transport-booking-details",
+        path: "/admin-yh/secure/transport-booking-details",
         element: <ProtectedRoute Component={TransportBooking} />,
       },
       {
-        path: "/admin/secure/yh-hotel-booking-details",
+        path: "/admin-yh/secure/yh-hotel-booking-details",
         element: <ProtectedRoute Component={YHotelBooking} />,
       },
       {
-        path: "/admin/secure/yh-apartment-booking-details",
+        path: "/admin-yh/secure/yh-apartment-booking-details",
         element: <ProtectedRoute Component={YHApartmentBooking} />,
       },
       {
-        path: "/admin/secure/holiday-booking-details",
+        path: "/admin-yh/secure/holiday-booking-details",
         element: <ProtectedRoute Component={HolidayBooking} />,
       },
       {
-        path: "/admin/secure/ourPartners",
+        path: "/admin-yh/secure/ourPartners",
         element: <ProtectedRoute Component={Partners} />,
       },
       {
-        path: "/admin/secure/verifyCode",
+        path: "/admin-yh/secure/verifyCode",
         element: <ProtectedRoute Component={VerifyCode} />,
       },
-      // {
-      //   path: "/admin/secure/image-upload",
-      //   element: <ProtectedRoute Component={ImageUpload} />,
-      // },
     ],
   },
 ]);
+

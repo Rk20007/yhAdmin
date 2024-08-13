@@ -35,7 +35,7 @@ const Login = () => {
       localStorage.setItem("admin_name", res.data.name);
       setLoading(false);
       setTimeout(() => {
-        window.location.href = "/admin/secure/home";
+        window.location.href = "/admin-yh/secure/home";
       }, 1500);
     } else {
       toast.error("User not found");
@@ -47,11 +47,10 @@ const Login = () => {
       style={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        minHeight: "85vh",
+        alignItems: "center"
       }}
     >
-      <Paper elevation={10} sx={{ borderRadius: "15px" }}>
+      <Paper elevation={10} sx={{ borderRadius: "15px", marginTop: '7rem' }}>
         <Box
           sx={{
             p: 4,

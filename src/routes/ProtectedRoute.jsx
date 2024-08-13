@@ -7,9 +7,9 @@ const ProtectedRoute = ({ Component }) => {
   useEffect(() => {
     const isLogin = Cookies.get("YH_admin_token");
     if (!isLogin) {
-      nav("/");
+      nav("/admin-yh/");
     }
-    if (Cookies.get("YH_admin_token") && window.location.pathname === "/") {
+    if (Cookies.get("YH_admin_token") && window.location.pathname === "/admin-yh/") {
       nav("/admin/secure/home");
     }
     // if (window.location.pathname === "/") {
