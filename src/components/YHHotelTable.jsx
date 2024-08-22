@@ -34,6 +34,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 export default function YHHotelTable({ deals, getDeals }) {
+  console.log("+++++++++++++", deals)
   const [open, setOpen] = React.useState(false);
   const [updateData, setUpdateData] = React.useState({});
 
@@ -54,13 +55,13 @@ export default function YHHotelTable({ deals, getDeals }) {
 
   return (
     <TableContainer component={Paper}>
-      <YHHotelModal
+      {/* <YHHotelModal
         open={open}
         setOpen={setOpen}
         updateData={updateData}
         setUpdateData={setUpdateData}
         getDeals={getDeals}
-      />
+      /> */}
       <Table sx={{ minWidth: 800 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -79,9 +80,9 @@ export default function YHHotelTable({ deals, getDeals }) {
           {deals?.map((ele) => (
             <StyledTableRow key={ele._id}>
               <StyledTableCell align="center">{ele._id}</StyledTableCell>
-              <StyledTableCell align="center">{ele.star}</StyledTableCell>
+              <StyledTableCell align="center">{ele.star_category}</StyledTableCell>
               <StyledTableCell align="center">{ele.reviews}</StyledTableCell>
-              <StyledTableCell align="center">{ele.title}</StyledTableCell>
+              <StyledTableCell align="center">{ele.hotelName}</StyledTableCell>
               <StyledTableCell align="center">{ele.city}</StyledTableCell>
               <StyledTableCell align="center">{ele.country}</StyledTableCell>
               <StyledTableCell align="center">
@@ -101,13 +102,13 @@ export default function YHHotelTable({ deals, getDeals }) {
                     alignItems: "center",
                   }}
                 >
-                  <Button
+                  {/* <Button
                     variant="contained"
                     color="secondary"
                     onClick={() => hanldeUpdateData(ele)}
                   >
                     <ModeEditOutlineOutlinedIcon />
-                  </Button>
+                  </Button> */}
                   <Button
                     variant="contained"
                     color="secondary"

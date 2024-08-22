@@ -69,7 +69,7 @@ export default function YHHotelModal({
             <TextField
               id="outlined-basic"
               label="Enter Star"
-              value={updateData.star}
+              value={updateData.star_category}
               variant="outlined"
               type="number"
               name="star"
@@ -97,7 +97,7 @@ export default function YHHotelModal({
             <TextField
               id="outlined-basic"
               label="Enter Title"
-              value={updateData.title}
+              value={updateData.hotelName}
               variant="outlined"
               name="title"
               onChange={(e) =>

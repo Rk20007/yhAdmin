@@ -14,6 +14,7 @@ import toast from "react-hot-toast";
 import { YHHotelDeleteAPI } from "../api/yhHotel.api";
 import YHHotelModal from "./YHHotelModal";
 import YHAppartmentModal from "./YHAppModal";
+import axios from "axios";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -48,20 +49,31 @@ export default function YHAppartmentTable({ deals, getDeals }) {
     }
   };
 
-  const hanldeUpdateData = (data) => {
-    setOpen(true);
-    setUpdateData(data);
+  const hanldeUpdateData = async (data) => {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_APP_API_URL}api/v1/update-yhhotels`,
+        { _id: data._id }
+      );
+      if (response.status) {
+        getDeals();
+        toast.success("Successfully Activated");
+      }
+    } catch (error) {
+      console.log("error", error);
+      toast.error("Something went wrong");
+    }
   };
 
   return (
     <TableContainer component={Paper}>
-      <YHAppartmentModal
+      {/* <YHAppartmentModal
         open={open}
         setOpen={setOpen}
         updateData={updateData}
         setUpdateData={setUpdateData}
         getDeals={getDeals}
-      />
+      /> */}
       <Table sx={{ minWidth: 800 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -80,9 +92,11 @@ export default function YHAppartmentTable({ deals, getDeals }) {
           {deals?.map((ele) => (
             <StyledTableRow key={ele._id}>
               <StyledTableCell align="center">{ele._id}</StyledTableCell>
-              <StyledTableCell align="center">{ele.star}</StyledTableCell>
+              <StyledTableCell align="center">
+                {ele.star_category}
+              </StyledTableCell>
               <StyledTableCell align="center">{ele.reviews}</StyledTableCell>
-              <StyledTableCell align="center">{ele.title}</StyledTableCell>
+              <StyledTableCell align="center">{ele.hotelName}</StyledTableCell>
               <StyledTableCell align="center">{ele.city}</StyledTableCell>
               <StyledTableCell align="center">{ele.country}</StyledTableCell>
               <StyledTableCell align="center">
@@ -102,13 +116,23 @@ export default function YHAppartmentTable({ deals, getDeals }) {
                     alignItems: "center",
                   }}
                 >
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    onClick={() => hanldeUpdateData(ele)}
-                  >
-                    <ModeEditOutlineOutlinedIcon />
-                  </Button>
+                  {ele.active ? (
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      disabled={true}
+                    >
+                      Actived
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      onClick={() => hanldeUpdateData(ele)}
+                    >
+                      Active
+                    </Button>
+                  )}
                   <Button
                     variant="contained"
                     color="secondary"
