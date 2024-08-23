@@ -45,7 +45,7 @@ import ImageUpload from "../pages/ImageUpload.jsx";
 
 export const router = createBrowserRouter([
   {
-    path: "/admin-yh/",
+    path: "/",
     element: <CommonElement />,
     children: [
       {
