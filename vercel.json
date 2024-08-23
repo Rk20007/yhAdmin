@@ -1,6 +1,8 @@
 {
-    "rewrites": [
-      { "source": "/admin-yh/(.*)", "destination": "/admin-yh/" }
-    ]
-  }
-  
+  "rewrites": [
+    { "source": "/admin-yh/(.*)", "destination": "/admin-yh/index.html" }
+  ],
+  "redirects": [
+    { "source": "/admin-yh", "destination": "/admin-yh/", "statusCode": 301 }
+  ]
+}
