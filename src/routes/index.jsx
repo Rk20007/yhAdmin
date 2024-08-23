@@ -49,11 +49,11 @@ export const router = createBrowserRouter([
     element: <CommonElement />,
     children: [
       {
-        index: true,
+        index: "/",
         element: <ProtectedRoute Component={Login} />,
       },
       {
-        path: "/admin-yh/secure/home",  // Changed from /admin/secure/home to secure/home
+        path: "/secure/home",  // Changed from /admin/secure/home to secure/home
         element: <ProtectedRoute Component={Homepage} />,
       },
       {
