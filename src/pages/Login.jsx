@@ -35,7 +35,7 @@ const Login = () => {
       localStorage.setItem("admin_name", res.data.name);
       setLoading(false);
       setTimeout(() => {
-        window.location.href = "/admin-yh/secure/home";
+        window.location.href = "/secure/home";
       }, 1500);
     } else {
       toast.error("User not found");

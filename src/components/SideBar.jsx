@@ -85,7 +85,7 @@ export default function SideBar({ children }) {
   };
 
   const menuItems = [
-    { text: "Home", path: "/admin-yh/secure/home", icon: <CottageIcon /> },
+    { text: "Home", path: "/secure/home", icon: <CottageIcon /> },
     {
       text: "Flight Page",
       path: "",
@@ -94,13 +94,13 @@ export default function SideBar({ children }) {
       submenuItems: [
         {
           text: "Top Destinations",
-          path: "/admin-yh/secure/flight-top-destination",
+          path: "/secure/flight-top-destination",
         },
-        { text: "Flight Offers", path: "/admin-yh/secure/flight-offer" },
-        { text: "Flight Banner", path: "/admin-yh/secure/flight-banner" },
+        { text: "Flight Offers", path: "/secure/flight-offer" },
+        { text: "Flight Banner", path: "/secure/flight-banner" },
         {
           text: "Flight Testimonial",
-          path: "/admin-yh/secure/flight-testimonial",
+          path: "/secure/flight-testimonial",
         },
       ],
       open: openFlightMenu,
@@ -112,23 +112,23 @@ export default function SideBar({ children }) {
       icon: <HotelIcon />,
       hasSubmenu: true,
       submenuItems: [
-        { text: "Hotel Banner", path: "/admin-yh/secure/hotel-banner" },
-        { text: "Hotel Offers", path: "/admin-yh/secure/hotel-offer" },
+        { text: "Hotel Banner", path: "/secure/hotel-banner" },
+        { text: "Hotel Offers", path: "/secure/hotel-offer" },
         {
           text: "Top Destinations",
-          path: "/admin-yh/secure/flight-top-destination",
+          path: "/secure/flight-top-destination",
         },
         {
           text: "Top Rated Hotels",
-          path: "/admin-yh/secure/hotel-hotelswithdeal",
+          path: "/secure/hotel-hotelswithdeal",
         },
         {
           text: "Trending getaways",
-          path: "/admin-yh/secure/hotel-trending-gateway",
+          path: "/secure/hotel-trending-gateway",
         },
         {
           text: "Nearby Shooting Ranges",
-          path: "/admin-yh/secure/hotel-shooting-range",
+          path: "/secure/hotel-shooting-range",
         },
       ],
       open: openHotelMenu,
@@ -140,9 +140,9 @@ export default function SideBar({ children }) {
       icon: <DirectionsCarIcon />,
       hasSubmenu: true,
       submenuItems: [
-        { text: "Transport Banner", path: "/admin-yh/secure/transport-banner" },
-        { text: "Transport Offers", path: "/admin-yh/secure/transport-offer" },
-        { text: "Transport Service", path: "/admin-yh/secure/transport-services" },
+        { text: "Transport Banner", path: "/secure/transport-banner" },
+        { text: "Transport Offers", path: "/secure/transport-offer" },
+        { text: "Transport Service", path: "/secure/transport-services" },
       ],
       open: openTransportMenu,
       handleClick: handleTransportMenuClick,
@@ -153,9 +153,9 @@ export default function SideBar({ children }) {
       icon: <DiscountIcon />,
       hasSubmenu: true,
       submenuItems: [
-        { text: "Flight Offers", path: "/admin-yh/secure/offer-flight" },
-        { text: "Hotel Offers", path: "/admin-yh/secure/offer-hotel" },
-        { text: "Transport Offers", path: "/admin-yh/secure/offer-transport" },
+        { text: "Flight Offers", path: "/secure/offer-flight" },
+        { text: "Hotel Offers", path: "/secure/offer-hotel" },
+        { text: "Transport Offers", path: "/secure/offer-transport" },
       ],
       open: openOffersMenu,
       handleClick: handleOffersMenuClick,
@@ -166,25 +166,25 @@ export default function SideBar({ children }) {
       hasSubmenu: true,
       icon: <AccessibilityNewIcon />,
       submenuItems: [
-        { text: "YH Hotels", path: "/admin-yh/secure/yh-hotel" },
-        { text: "YH Apartments", path: "/admin-yh/secure/yh-appartment" },
+        { text: "YH Hotels", path: "/secure/yh-hotel" },
+        { text: "YH Apartments", path: "/secure/yh-appartment" },
       ],
       open: openYHHOteldsMenu,
       handleClick: handleYHHOteldsMenuClick,
     },
     {
       text: "Holiday Package",
-      path: "/admin-yh/secure/holidayPackage",
+      path: "/secure/holidayPackage",
       icon: <SnowboardingIcon />,
     },
     {
       text: "YH Gallery",
-      path: "/admin-yh/secure/gallery",
+      path: "/secure/gallery",
       icon: <CollectionsIcon />,
     },
     {
       text: "My Services",
-      path: "/admin-yh/secure/services",
+      path: "/secure/services",
       icon: <ManageAccountsIcon />,
     },
     {
@@ -193,15 +193,15 @@ export default function SideBar({ children }) {
       icon: <SmsIcon />,
       hasSubmenu: true,
       submenuItems: [
-        { text: "Pending", path: "/admin-yh/secure/support-pending" },
-        { text: "Solved", path: "/admin-yh/secure/support-solved" },
+        { text: "Pending", path: "/secure/support-pending" },
+        { text: "Solved", path: "/secure/support-solved" },
       ],
       open: openSupportMenu,
       handleClick: handleSupportMenuClick,
     },
     {
       text: "Users Details",
-      path: "/admin-yh/secure/user-details",
+      path: "/secure/user-details",
       icon: <PersonIcon />,
     },
     {
@@ -212,11 +212,11 @@ export default function SideBar({ children }) {
       submenuItems: [
         {
           text: "HotelListing Details",
-          path: "/admin-yh/secure/hotel-listing-details",
+          path: "/secure/hotel-listing-details",
         },
         {
           text: "Transport Listing Details",
-          path: "/admin-yh/secure/transport-listing-details",
+          path: "/secure/transport-listing-details",
         },
       ],
       open: openListingMenu,
@@ -228,22 +228,22 @@ export default function SideBar({ children }) {
       hasSubmenu: true,
       icon: <BeenhereIcon />,
       submenuItems: [
-        { text: "Hotel Booking", path: "/admin-yh/secure/hotel-booking-details" },
+        { text: "Hotel Booking", path: "/secure/hotel-booking-details" },
         {
           text: "Transport Booking",
-          path: "/admin-yh/secure/transport-booking-details",
+          path: "/secure/transport-booking-details",
         },
         {
           text: "YH Hotel Booking",
-          path: "/admin-yh/secure/yh-hotel-booking-details",
+          path: "/secure/yh-hotel-booking-details",
         },
         {
           text: "YH Apartment Booking",
-          path: "/admin-yh/secure/yh-apartment-booking-details",
+          path: "/secure/yh-apartment-booking-details",
         },
         {
           text: "Holiday Package Booking",
-          path: "/admin-yh/secure/holiday-booking-details",
+          path: "/secure/holiday-booking-details",
         },
       ],
       open: openBookikngMenu,
@@ -251,22 +251,22 @@ export default function SideBar({ children }) {
     },
     {
       text: "Payment Details",
-      path: "/admin-yh/secure/paymentDetail",
+      path: "/secure/paymentDetail",
       icon: <CurrencyRupeeIcon />,
     },
     {
       text: "Why Book With Us",
-      path: "/admin-yh/secure/whyBook",
+      path: "/secure/whyBook",
       icon: <PushPinIcon />,
     },
     {
       text: "Social Media",
-      path: "/admin-yh/secure/socialMedia",
+      path: "/secure/socialMedia",
       icon: <ShareIcon />,
     },
     {
       text: "Our Partners",
-      path: "/admin-yh/secure/ourPartners",
+      path: "/secure/ourPartners",
       icon: <HandshakeIcon />,
     },
     // {
