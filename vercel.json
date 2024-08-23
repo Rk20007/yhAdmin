@@ -1,8 +1,6 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/admin-yh/(.*)", "destination": "/admin-yh/index.html" }
-  ],
-  "redirects": [
-    { "source": "/admin-yh", "destination": "/admin-yh/", "statusCode": 301 }
   ]
 }
