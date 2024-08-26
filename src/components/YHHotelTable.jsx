@@ -34,7 +34,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 export default function YHHotelTable({ deals, getDeals }) {
-  console.log("+++++++++++++", deals)
   const [open, setOpen] = React.useState(false);
   const [updateData, setUpdateData] = React.useState({});
 
@@ -48,9 +47,20 @@ export default function YHHotelTable({ deals, getDeals }) {
     }
   };
 
-  const hanldeUpdateData = (data) => {
-    setOpen(true);
-    setUpdateData(data);
+  const hanldeUpdateData = async (data) => {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_APP_API_URL}api/v1/update-yhhotels`,
+        { _id: data._id }
+      );
+      if (response.status) {
+        getDeals();
+        toast.success("Successfully Activated");
+      }
+    } catch (error) {
+      console.log("error", error);
+      toast.error("Something went wrong");
+    }
   };
 
   return (
@@ -102,13 +112,23 @@ export default function YHHotelTable({ deals, getDeals }) {
                     alignItems: "center",
                   }}
                 >
-                  {/* <Button
-                    variant="contained"
-                    color="secondary"
-                    onClick={() => hanldeUpdateData(ele)}
-                  >
-                    <ModeEditOutlineOutlinedIcon />
-                  </Button> */}
+                  {ele.active ? (
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      disabled={true}
+                    >
+                      Actived
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      onClick={() => hanldeUpdateData(ele)}
+                    >
+                      Active
+                    </Button>
+                  )}
                   <Button
                     variant="contained"
                     color="secondary"
