@@ -13,6 +13,7 @@ import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined
 import toast from "react-hot-toast";
 import { YHHotelDeleteAPI } from "../api/yhHotel.api";
 import YHHotelModal from "./YHHotelModal";
+import axios from "axios";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
