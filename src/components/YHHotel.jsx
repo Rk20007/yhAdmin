@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import YHHotelTable from "./YHHotelTable";
 import ImageUpload from "../pages/ImageUpload";
 import axios from "axios";
+import ImageUploader from "../pages/ImageUpload";
 
 const YHHotel = () => {
   const [deals, setDeals] = useState([]);
@@ -583,7 +584,7 @@ const YHHotel = () => {
         </Button>
       </section>
       <section>
-        <ImageUpload />
+        <ImageUploader />
       </section>
       <section
         style={{
